@@ -163,7 +163,7 @@ body #logo {
 }
 @media (min-width: 64em) {
   body {
-    margin-top: 10vh;
+    height: 100vh;
   }
 }
 body #container {
@@ -181,5 +181,6 @@ body #container {
          column-gap: 40px;
     max-width: 930px;
     border-radius: 30px;
+    max-height: 450px;
   }
 }/*# sourceMappingURL=style.css.map */
