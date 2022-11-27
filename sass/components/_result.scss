@@ -1,0 +1,53 @@
+@use "../base/breakpoints" as *;
+
+#result {
+  margin-top: 24px;
+  padding: 35px 20px;
+  background-color: var(--Verydarkcyan);
+  border-radius: 16px;
+  color: var(--White);
+
+  #tip-amount {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #total-amount {
+    margin: 30px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .person {
+    color: var(--Darkgrayishcyan);
+  }
+
+  .amount {
+    color: var(--Strongcyan);
+    font-size: 1.875rem;
+  }
+
+  #reset {
+    width: 100%;
+    height: 50px;
+    color: var(--Verydarkcyan);
+    background-color: var(--Strongcyan);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    border-radius: 10px;
+    cursor: pointer;
+
+    @include breakpoint(large) {
+      margin-top: 85px;
+    }
+  }
+
+  @include breakpoint(large) {
+    flex-basis: 50%;
+  }
+}

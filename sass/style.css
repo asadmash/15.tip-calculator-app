@@ -1,0 +1,185 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+input {
+  font-family: "Space Mono", monospace;
+}
+
+/* Firefox */
+input[type=number] {
+  -webkit-appearance: textfield;
+     -moz-appearance: textfield;
+          appearance: textfield;
+}
+
+:root {
+  --Strongcyan: hsl(172, 67%, 45%);
+  --Verydarkcyan: hsl(183, 100%, 15%);
+  --Darkgrayishcyan: hsl(186, 14%, 43%);
+  --Grayishcyan: hsl(184, 14%, 56%);
+  --Lightgrayishcyan: hsl(185, 41%, 84%);
+  --Verylightgrayishcyan: hsl(189, 41%, 97%);
+  --White: hsl(0, 0%, 100%);
+}
+
+#tip-calculator label,
+#tip-calculator input {
+  display: block;
+}
+#tip-calculator label {
+  color: var(--Grayishcyan);
+}
+#tip-calculator input {
+  width: 100%;
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+  background-color: var(--Verylightgrayishcyan);
+  padding: 0 10px;
+  font-size: 1.5rem;
+  text-align: right;
+}
+#tip-calculator #bill-input {
+  margin: 12px 0 35px;
+}
+#tip-calculator #tip-percent {
+  margin: 20px 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+#tip-calculator #tip-percent .tip {
+  height: 50px;
+  width: 100%;
+  background-color: var(--Verydarkcyan);
+  border-radius: 5px;
+  text-align: center;
+  color: var(--White);
+  line-height: 2.2;
+  font-size: 1.5rem;
+}
+#tip-calculator #tip-percent .tip-custom {
+  text-align: center;
+  text-transform: capitalize;
+  letter-spacing: 0.101;
+  font-weight: bold;
+  background-color: var(--Verylightgrayishcyan);
+  color: var(--Verydarkcyan);
+}
+#tip-calculator #tip-percent .active {
+  background-color: var(--Strongcyan);
+  color: var(--White);
+}
+@media (min-width: 64em) {
+  #tip-calculator #tip-percent {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+#tip-calculator .error {
+  display: none;
+  color: var(red);
+}
+#tip-calculator #people-lebel {
+  display: flex;
+  justify-content: space-between;
+  margin: 40px 0 10px;
+}
+#tip-calculator .people-input {
+  background-image: url(../../images/icon-person.svg);
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-position-x: left 10px;
+}
+@media (min-width: 64em) {
+  #tip-calculator {
+    flex-basis: 50%;
+  }
+}
+
+#result {
+  margin-top: 24px;
+  padding: 35px 20px;
+  background-color: var(--Verydarkcyan);
+  border-radius: 16px;
+  color: var(--White);
+}
+#result #tip-amount {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#result #total-amount {
+  margin: 30px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#result .person {
+  color: var(--Darkgrayishcyan);
+}
+#result .amount {
+  color: var(--Strongcyan);
+  font-size: 1.875rem;
+}
+#result #reset {
+  width: 100%;
+  height: 50px;
+  color: var(--Verydarkcyan);
+  background-color: var(--Strongcyan);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.7rem;
+  text-transform: uppercase;
+  border-radius: 10px;
+  cursor: pointer;
+}
+@media (min-width: 64em) {
+  #result #reset {
+    margin-top: 85px;
+  }
+}
+@media (min-width: 64em) {
+  #result {
+    flex-basis: 50%;
+  }
+}
+
+body {
+  background-color: var(--Lightgrayishcyan);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+body #logo {
+  padding: 45px 0;
+}
+@media (min-width: 64em) {
+  body {
+    margin-top: 10vh;
+  }
+}
+body #container {
+  background-color: var(--White);
+  width: 100%;
+  height: 100%;
+  border-radius: 30px 30px 0 0;
+  padding: 35px 25px;
+  max-width: 500px;
+}
+@media (min-width: 64em) {
+  body #container {
+    display: flex;
+    -moz-column-gap: 40px;
+         column-gap: 40px;
+    max-width: 930px;
+    border-radius: 30px;
+  }
+}/*# sourceMappingURL=style.css.map */

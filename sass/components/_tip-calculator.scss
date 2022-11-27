@@ -1,0 +1,83 @@
+@use "../base/breakpoints" as *;
+
+#tip-calculator {
+  label,
+  input {
+    display: block;
+  }
+
+  label {
+    color: var(--Grayishcyan);
+  }
+
+  input {
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--Verylightgrayishcyan);
+    padding: 0 10px;
+    font-size: 1.5rem;
+    text-align: right;
+  }
+
+  #bill-input {
+    margin: 12px 0 35px;
+  }
+
+  #tip-percent {
+    margin: 20px 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    .tip {
+      height: 50px;
+      width: 100%;
+      background-color: var(--Verydarkcyan);
+      border-radius: 5px;
+      text-align: center;
+      color: var(--White);
+      line-height: 2.2;
+      font-size: 1.5rem;
+    }
+
+    .tip-custom {
+      text-align: center;
+      text-transform: capitalize;
+      letter-spacing: 0.101;
+      font-weight: bold;
+      background-color: var(--Verylightgrayishcyan);
+      color: var(--Verydarkcyan);
+    }
+
+    .active {
+      background-color: var(--Strongcyan);
+      color: var(--White);
+    }
+
+    @include breakpoint(large) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  .error {
+    display: none;
+    color: var(red);
+  }
+
+  #people-lebel {
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 0 10px;
+  }
+
+  .people-input {
+    background-image: url(../../images/icon-person.svg);
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: left 10px;
+  }
+
+  @include breakpoint(large) {
+    flex-basis: 50%;
+  }
+}
